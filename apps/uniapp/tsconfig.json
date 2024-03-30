@@ -1,0 +1,35 @@
+{
+  "extends": "../../packages/cli/config/tsconfig.web.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    "lib": [
+      "esnext"
+    ],
+    "types": [
+      "node",
+      "@dcloudio/types",
+      "miniprogram-api-typings",
+      "@uni-helper/uni-app-types",
+      "@uni-helper/uni-ui-types"
+    ]
+  },
+  "include": [
+    "shims-uni.d.ts",
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue"
+  ],
+  "vueCompilerOptions": {
+    "nativeTags": [
+      "component",
+      "template",
+      "slot"
+    ]
+  }
+}
